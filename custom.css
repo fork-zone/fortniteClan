@@ -1,0 +1,85 @@
+
+/* Custom classes used for the carousel on the index page. */
+.carousel-claninfo {
+    width: 500px;
+}
+.outter-jumbotron {
+    height: 420px;
+    background:linear-gradient(#000000a0, #000000a0), url('images/jumbobg3.jpeg');
+    background-position-y: -250px;
+}
+.inner-jumbotron {
+    height: 320px;
+    background: rgba(0,0,0,0.5);
+}
+.logo {
+    height: 30px; 
+    width: auto;
+}
+.carousel-image {
+    height: 280px;; 
+    width: auto;
+}
+.card-size {
+    width: 18rem;
+}
+/* class used when there is not enough content to push the footer down. */
+.minh-72 {
+    min-height: 72vh;
+}
+.form-group i.fas {
+    position: relative;
+    top: 37px; 
+    left: -57px; 
+    z-index: 100;
+}
+
+/* viewclan.php custom classes */
+.clan-text {
+    font-size: 20px;
+    border-top: 1px solid rgba(128, 128, 128, 0.384);
+}
+.clan-name {
+    font-size: 48px;
+    font-weight: bold;
+    float: left;
+}
+.clan-buttons {
+    justify-content: space-evenly;
+    
+}
+.clan-image {
+    height: 320px;
+    width: auto;
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .carousel-claninfo {
+        display: none !important;
+    }
+
+}
+
+@media only screen and (max-width: 500px) {
+    .card-size {
+        width:10rem
+    }
+    .card-body {
+        padding: .45rem;
+    }
+    .card-body p {
+        font-size: 12px;
+    }
+    .card-title {
+        margin-bottom: 0.25rem;
+    }
+    .clan-text {
+        font-size: 14px;
+    }
+    .carousel-image {
+        height: 190px;
+        width: auto;
+    }
+
+}

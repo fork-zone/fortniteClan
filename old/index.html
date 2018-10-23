@@ -1,0 +1,217 @@
+<html>
+  <head>
+    <title>Fortnite Clans</title>
+    <link type="text/css" rel="stylesheet" href="style1.css" />
+  </head>
+  <body>
+    <nav>
+      <div id="logo">
+        <img src="images/logo.png"/>
+      </div>
+      <div id="navlinks">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="addclan.html">ADD CLAN</a></li>
+          <li><a id="login" href="#" onclick="findClan()">FIND CLAN</a></li>
+          <li><a id="login" href="#" onclick="myFunction()">LOGIN</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div id="login-box">
+      <form>
+        <input class="textboxes" type="text" size="20" placeholder="Username" />
+        <input class="textboxes" type="password" size="20" placeholder="Password" />
+      </form>
+      <button>Login</button>
+      <button>Register</button>
+    </div>
+
+    <div id="search-box">
+      <form>
+        <input class="textboxes" type="text" size="20" placeholder="Clan Name" />
+        <button>Search</button>  
+      </form>
+    </div>
+
+    <div id="main-container">
+
+      <img class="background" src="images/fortnite-g5.jpg"/>
+      <div id="inner-container">
+        <div id="clan-box">
+          <div id="filler-image">
+            <img class="clan-image" src="images/roargaming.jpg" />
+          </div>
+          <div id="clan-info">
+            <div id="clan-description">
+              <h3>Roar Gaming</h3>
+              <p>
+                  We are an upcoming clan that is for casual players.We are a cross-platform clan, so it doesn't matter if you're  PS4 or XBOX. Everybody is welcome!
+              </p>
+              </div>
+            <div id="clan-options">
+              <button>More Info</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="clan-box">
+          <div id="filler-image">
+            <img class="clan-image" src="images/seismic.jpg" />
+          </div>
+          <div id="clan-info">
+            <div id="clan-description">
+              <h3>Seismic</h3>
+              <p>
+                A clan of mature gamers who value social interaction above all else. Personality with character and honour is more important to us than idiots.
+              </p>
+            </div>
+            <div id="clan-options">
+              <button>More Info</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="clan-box">
+          <div id="filler-image">
+            <img class="clan-image" src="images/adaf.jpg" />
+          </div>
+          <div id="clan-info">
+            <div id="clan-description">
+              <h3>ADAF Clan</h3>
+              <p>
+                  Fortnite PlayStation 4 Clan playing in the Europe/Asia area.
+
+                  Min k/d 2.5 and over 400 wins. Please join only if you have these stats
+              </p>
+              </div>
+            <div id="clan-options">
+              <button>More Info</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="clan-box">
+          <div id="filler-image">
+            <img class="clan-image" src="images/chaosclan.jpg" />
+          </div>
+          <div id="clan-info">
+            <div id="clan-description">
+              <h3>Chaos Clan</h3>
+              <p>We are the Chaos Clan, a new Fortnite clan. We are currently looking for all roles, which include: executive directors, directors, division leaders, editors, designers, and of course players!</p>
+            </div>
+            <div id="clan-options">
+              <button>More Info</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="clan-box">
+          <div id="filler-image">
+            <img class="clan-image" src="images/teamclassic.jpg" />
+          </div>
+          <div id="clan-info">
+            <div id="clan-description">
+              <h3>Team Classic</h3>
+              <p>
+                  We are an upcoming GERMAN eSports Clan. We are a cross-platform eSports Clan, so it doesn't matter if you're PS4, XBOX or SWITCH player. Everybody is welcome! 
+              </p>
+              </div>
+            <div id="clan-options">
+              <button>More Info</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="clan-box">
+          <div id="filler-image">
+            <img class="clan-image" src="images/thunderbear.jpg" />
+          </div>
+          <div id="clan-info">
+            <div id="clan-description">
+              <h3>Thunderbear Gaming</h3>
+              <p>
+                  If you have been looking for a friendly gaming clan for what seems like an eternity, unable to find anything fun, active or laid-back enough, maybe give this one a try!
+              </p>
+              </div>
+            <div id="clan-options">
+              <button>More Info</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="clan-box">
+          <div id="filler-image">
+            <img class="clan-image" src="images/taken.jpg" />
+          </div>
+          <div id="clan-info">
+            <div id="clan-description">
+              <h3>Taken Gaming</h3>
+              <p>
+                  TaKeN started off as a gaming clan for both casual and competitive players, for us this was a bit overwhelming, so we decided to make TaKeN a casual gaming community.
+              </p>
+              </div>
+            <div id="clan-options">
+              <button>More Info</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="clan-box">
+          <div id="filler-image">
+            <img class="clan-image" src="images/nolimits.jpg" />
+          </div>
+          <div id="clan-info">
+            <div id="clan-description">
+              <h3>No Limits</h3>
+              <p>
+                  This clan is about having fun, winning, and we might also play in tournaments sometimes. Requirements: Have at least 10 wins, Must be able to build
+              </p>
+              </div>
+            <div id="clan-options">
+              <button>More Info</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer">
+        designed by Michael Nathan 2018
+    </div>
+
+    <script>
+      function myFunction() {
+          var x = document.getElementById("login-box");
+          var y = document.getElementById("search-box");
+          if (x.style.display === "flex") {
+              x.style.display = "none";
+          } else {
+              x.style.display = "flex";
+              y.style.display = "none";
+          }
+      }
+      function findClan() {
+          var x = document.getElementById("search-box");
+          var y = document.getElementById("login-box");
+          if (x.style.display === "flex") {
+              x.style.display = "none";
+          } else {
+              x.style.display = "flex";
+              y.style.display = "none";
+          }
+      }
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123158934-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-123158934-1');
+</script>
+
+  </body>
+</html>
