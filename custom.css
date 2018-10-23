@@ -52,6 +52,9 @@
     height: 320px;
     width: auto;
 }
+.force-btm {
+    bottom: 1px;
+}
 
 
 @media only screen and (max-width: 1000px) {
