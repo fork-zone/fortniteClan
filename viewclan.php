@@ -1,9 +1,12 @@
-<?php include("header.php"); 
+<?php include("header.php");
 
 $id = $_GET['clan'];
-$sql = "SELECT * FROM clans WHERE id = $id";
-$result = $conn->query($sql);
-$row = $result->fetch_assoc();
+// $sql = "SELECT * FROM clans WHERE id = $id";
+// $result = $conn->query($sql);
+// $row = $result->fetch_assoc();
+
+$query = new Query;
+$row = $query->singleClan($id)->fetch_assoc();
 
 ?>
     <div class="container-fluid minh-72">
