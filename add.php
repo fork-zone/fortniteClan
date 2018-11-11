@@ -7,7 +7,7 @@ if (isset($_POST['name'])) {
     $description = $_POST['description'];
     $discord = $_POST['discord'];
     $website = $_POST['website'];
-    $userid = 1;
+    $userid = $_SESSION['userid'];
     echo '<div class="alert alert-success">Received POST variables</div>';
 
     if(isset($_FILES['image'])){
@@ -22,10 +22,12 @@ if (isset($_POST['name'])) {
         $expensions= array("jpeg","jpg","png","svg");
         
         if(in_array($file_ext,$expensions)=== false){
-           $errors[]="File extension not allowed, please choose a JPEG, PNG, or SVG file.";
+            echo '<div class="alert alert-danger">File extension not allowed, please choose a JPEG, PNG, or SVG file.</div>';
+            $errors[]="File extension not allowed, please choose a JPEG, PNG, or SVG file.";
         }
         
         if($file_size > 2097152) {
+            echo '<div class="alert alert-danger">File size must be less than 2 MB</div>';
            $errors[]='File size must be less than 2 MB';
         }
         
@@ -33,12 +35,9 @@ if (isset($_POST['name'])) {
             if(move_uploaded_file($file_tmp,"images/".$file_name)) {
                 echo '<div class="alert alert-success">Image successfully uploaded.</div>';
             } else {
-                echo "nope. didnt upload";
+                echo '<div class="alert alert-danger">Image upload failed.</div>';
             }
-            
-           
-           //echo '<div class="alert alert-success">The temp directory is showing as '.$file_tmp.'</div>';
-           //print_r($errors);
+
         }else{
             print_r($errors);
         }
