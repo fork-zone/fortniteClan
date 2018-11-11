@@ -1,4 +1,4 @@
-<?php 
+<?php
 include("adminheader.php");
 
 //Get the ID, query the database for values to be used if nothing has changed.
@@ -28,7 +28,7 @@ if (isset($_POST['name'])) {
 
         //Define the allowed file types
         $expensions= array("jpeg","jpg","png","svg");
-        
+
         //Check to see if the image uploaded is one of the allowed file types.
         if(in_array($file_ext,$expensions)=== false){
            $errors[]="File extension not allowed, please choose a JPEG, PNG, or SVG file.";
@@ -70,7 +70,7 @@ if (isset($_POST['name'])) {
     $row = $result->fetch_assoc();
 }
 ?>
-    <div class="container mt-2">
+    <div class="container-fluid mt-2 minh-72">
         <div class="row justify-content-center">
             <div class="col-7">
                 <form action="edit.php?id=<?=$id?>" method="POST" enctype="multipart/form-data">
