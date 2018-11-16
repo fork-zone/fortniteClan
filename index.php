@@ -70,4 +70,4 @@ $x = 0;
     </ul>   
 
 </div>
-<?php include('footer.php'); ?>
+  <?php include('footer.php'); ?>
