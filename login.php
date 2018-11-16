@@ -6,11 +6,11 @@ if(isset($_POST['g-recaptcha-response'])) {
     $captcha = $_POST['g-recaptcha-response'];
     $ip = $_SERVER['REMOTE_ADDR'];
     $url = 'https://www.google.com/recaptcha/api/siteverify';
-  
+
     // RECAPTCH RESPONSE
     $recaptcha_response = file_get_contents($url.'?secret='.$key.'&response='.$captcha.'&remoteip='.$ip);
     $data = json_decode($recaptcha_response);
-  
+
     if(isset($data->success) &&  $data->success === true) {
 
         if (isset($_POST['username']) && isset($_POST['password'])) {
@@ -32,7 +32,7 @@ if(isset($_POST['g-recaptcha-response'])) {
                 //Check to see if the password in the database matches the password we received from the form.
                 if ($row['password'] == $pass) {
 
-                    //Create session variables to identify the user is now logged in. 
+                    //Create session variables to identify the user is now logged in.
                     $_SESSION['userid'] = $row['id'];
                     $_SESSION['username'] = $row['username'];
                     $_SESSION['loggedin'] = true;
@@ -49,7 +49,7 @@ if(isset($_POST['g-recaptcha-response'])) {
     }
 }
 ?>
-    <div class="container mt-2 minh-72">
+    <div class="container mt-2">
         <div class="row justify-content-center">
             <div class="col-md-4">
                 <form action="login.php" method="POST">

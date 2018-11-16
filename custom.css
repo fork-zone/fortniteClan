@@ -6,31 +6,26 @@
 .outter-jumbotron {
     height: 420px;
     background:linear-gradient(#000000a0, #000000a0), url('images/jumbobg3.jpeg');
-    background-position-y: -250px;
 }
 .inner-jumbotron {
     height: 320px;
     background: rgba(0,0,0,0.5);
 }
 .logo {
-    height: 30px; 
+    height: 30px;
     width: auto;
 }
 .carousel-image {
-    height: 280px;; 
+    height: 280px;;
     width: auto;
 }
 .card-size {
     width: 18rem;
 }
-/* class used when there is not enough content to push the footer down. */
-.minh-72 {
-    min-height: 72vh;
-}
 .form-group i.fas {
     position: relative;
-    top: 37px; 
-    left: -57px; 
+    top: 37px;
+    left: -57px;
     z-index: 100;
 }
 
@@ -46,7 +41,7 @@
 }
 .clan-buttons {
     justify-content: space-evenly;
-    
+
 }
 .clan-image {
     height: 320px;
@@ -58,7 +53,28 @@
 .max-190 {
     max-height: 190px;
 }
-
+.wrapper {
+  min-height:100vh;
+  position:relative;
+}
+body {
+    margin:0;
+    padding:0;
+    height:100%;
+}
+main {
+  padding-bottom: 200px;
+}
+footer {
+  position: absolute;
+  bottom:0;
+}
+footer p {
+  color: rgba(255, 255, 255, 0.7);
+}
+footer p a {
+  color: rgba(255, 255, 255, 0.9);
+}
 
 @media only screen and (max-width: 1000px) {
     .carousel-claninfo {
@@ -90,5 +106,14 @@
     .max-190 {
         max-height: 105px;
     }
+    main {
+      padding-bottom: 310px;
+    }
 
+}
+
+@media only screen and (max-width: 375px) {
+  main {
+    padding-bottom: 380px;
+  }
 }
